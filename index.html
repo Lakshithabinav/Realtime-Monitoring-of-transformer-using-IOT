@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>voltage monitoring</title>
+  <link rel="icon" href="/download.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("85TjJo0FgrVUTt-uu");
+   })();
+</script>
+  
+  
+</head>
+<body>
+  <div class = "head"><h1>REALTIME MONITORING SYSTEM FOR TRANSFORMER USING IOT</h1></div>
+    <div class="inner">
+      
+      
+      <div class="outer">
+        <div class="content">
+          <button class = "stbt" id ="but"onclick="startSerial()">Start</button>
+        <p >Voltage: <span id="pac">Zero</span> V</p>
+        <p >Average voltage: <span id="avg">Zero</span> V</p>
+        <p >Max voltage: <span id="max">Zero</span> V</p>
+        <p>Min Voltage : <span id="min">Zero</span> V</p>
+
+        
+        <button onclick="send_mail()" class="mail">send message via mail</button>
+        </div>
+        <script src="index.js"></script>
+  
+      </div>
+    </div>
+    <div id="popup">
+      <p>Establishing the connection <br>to Arduino Uno (COM 4) <br><br>
+        Wait for few seconds....<span class="timing"></span></p>
+    </div>
+    <div id="alert">
+      <p>Power supply is not given.</p>
+    </div>
+</body>
+</html>
